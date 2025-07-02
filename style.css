@@ -113,4 +113,12 @@ body {
     }
 }
 
+
+@media (max-width: 450px) {
+    .search button {
+        display: none;
+    }
+}
+
+
 /*https: //api.openweathermap.org/data/2.5/weather?q=egypt&appid=6505fdbf25323315b86091b2d35701fe&units=metric */
