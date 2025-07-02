@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feed /*#00feba*/, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    .search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input {
+            background-color: #ebfffc;
+            width: fit-content;
+            padding: 10px 25px;
+            color: #555;
+            height: 60px;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            margin-right: 16px;
+            font-size: 18px;
+            transition: .3s;
+            &:focus {
+                flex: 1;
+            }
+        }
+        button {
+            width: 60px;
+            background-color: #ebfffc;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            img {
+                width: 20px;
+            }
+        }
+    }
+    .weather {
+        display: none;
+        .weather-icon {
+            width: 170px;
+            margin-top: 30px;
+        }
+        h1 {
+            font-size: 80px;
+            font-weight: 500;
+        }
+        h2 {
+            font-size: 45px;
+            font-weight: 400;
+            margin-top: -10px;
+        }
+        .details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-top: 50px;
+            .col {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                img {
+                    width: 40px;
+                    margin-right: 10px;
+                }
+                .humidity, .wind {
+                    font-size: 28px;
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
+}
+
+.error {
+    text-align: left;
+    position: relative;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: #fff;
+    color: #000;
+    display: none;
+    border-radius: 6px;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background-color: #000;
+        border-radius: 12px 0 0 12px;
+    }
+}
+
+/*https: //api.openweathermap.org/data/2.5/weather?q=egypt&appid=6505fdbf25323315b86091b2d35701fe&units=metric */
