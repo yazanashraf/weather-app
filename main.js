@@ -24,3 +24,11 @@ searchBtn.onclick = function () {
     checkWeather(searchBox.value);
     searchBox.value = "";
 }
+
+
+searchBox.addEventListener("keydown", function (e) {
+    if(e.key == "Enter"){
+        checkWeather(searchBox.value);
+        searchBox.value = "";
+    }
+})
